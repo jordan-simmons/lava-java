@@ -8,19 +8,21 @@ h1, h2, h3, h4, h5, h6, th{
 	font-family: 'Walter Turncoat', helvetica;
 }
 
-p, tr, td{
+p, tr, td, div{
 	font-family: 'Kalam', candara;
 }
 
-section, span, #headline h1, #headline, #views, .view, #reviews, #about-content, footer, #social-links, #social-links img{
-	box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.8);
+section, span, #headline h1, #headline, #views, .view, #reviews, #about-content, footer, #social-links{
+	box-shadow: 2px 2px 5px rgba(5, 5, 5, 0.8);
 }
 
 .nav-button h3{
 	box-shadow: 1px 1px 4px rgba(50, 50, 50, 0.8);
 }
 
-
+section{
+	overflow: auto;
+}
 
 
 header {
@@ -80,7 +82,9 @@ footer img{
 	height: auto;
 }
 
-
+.clear{
+	clear: both;
+}
 
 /************************************************************
 NAV BAR
@@ -131,36 +135,6 @@ a:hover {
 
 
 
-/************************************************************
-SOCIAL 
-************************************************************/
-
-
-
-#social-links{
-	position: fixed;
-	top: 175px;
-	/*left: 10px;*/
-	overflow: auto;
-	padding: 10px 5px;
-	background-color: #e5e5e5;
-	border-radius: 0 10px 10px 0;
-
-}
-#social-links img{
-	width: 90px;
-	height: auto;
-	display: block;
-	border-radius: 100%;
-
-
-}
-
-#social-links img:nth-child(even){
-	margin-top: 5px;
-}
-
-
 
 /************************************************************
 HEADLINE
@@ -207,8 +181,6 @@ LOGO
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
 }
 
-
-
 /************************************************************
 VIEWS
 ************************************************************/
@@ -217,7 +189,7 @@ VIEWS
 
 #views{
 	background-color: #D6CB77;
-	max-width: 80%;
+	max-width: 50%;
 	min-width: 300px;
 	margin: 0 auto;
 	padding: 0 0 15px 0;
@@ -233,12 +205,14 @@ VIEWS
 
 .view{
 	background-color: #b5b5b5;	
-	max-width: 45%;
+	max-width: 75%;
 	min-width: 200px;
 	margin: 13px auto 10px;
 	padding: 5px;
 	/*border-radius: 50px 10px 10px 50px;*/
 	box-shadow: 2px 2px 5px #938E58;
+	border-radius: 8px;
+
 }
 
 
@@ -269,6 +243,7 @@ VIEWS
 
 
 
+
 /************************************************************
 REVIEWS
 ************************************************************/
@@ -278,10 +253,10 @@ REVIEWS
 #reviews{
 	background-color: #D6CB77;
 	max-width: 30%;
-	min-width: 400px;
+	min-width: 280px;
 	margin: 0 auto;
-	padding: 0 0 178px 0;
-	border-radius:10px 10px 5px 5px;
+	padding: 0 0 15px 0;
+	border-radius:10px;
 }
 
 #reviews h3{
@@ -334,9 +309,10 @@ ABOUT CONTENT
 
 
 
+
 #about-content{
 	max-width: 30%;
-	min-width: 400px;
+	min-width: 280px;
 	margin: 0 auto 15px;
 	padding: 0 0 30px;
 	background-color: #D6CB77;
@@ -391,13 +367,30 @@ margin: 15px auto 3px;
 }
 
 
+
+
+/*
+#about-content{
+	float: left;
+	margin-left: 21.5%;
+}
+#reviews{
+	float: right;
+	margin-right: 21.5%;
+}
+*/
+
+
+
+
+
 /************************************************************
 MENU
 ************************************************************/
 
 #menu{
-	max-width: 30%;
-	min-width: 400px;
+	max-width: 40%;
+	min-width: 300px;
 	margin: 0 auto 15px;
 	padding: 0 0 30px;
 	background-color: #D6CB77;
@@ -413,9 +406,9 @@ MENU
 }
 
 .tg  {
-	width: 85%;
+	width: 75%;
 	padding: 0 0 0 0;
-	margin: 10px auto;
+	margin: 5px auto;
 	border: 4px solid #7D7A50;
 	border-collapse:collapse;
 	border-spacing:0;
@@ -423,7 +416,7 @@ MENU
 
 .tg td{
 	font-size:14px;
-	padding:10px 5px;
+	padding:5px 2px;
 	border-style:solid;
 	border-width:2px;
 	border-color: #7D7A50; 
@@ -475,11 +468,12 @@ MERCH
 
 #shop{
 	background-color: #D6CB77;
-	max-width: 30%;
+	max-width: 80%;
 	min-width: 300px;
 	margin: 0 auto;
 	padding: 0 0 15px 0;
 	border-radius:10px 10px 5px 5px;
+	overflow: auto;
 }
 
 #shop h3{
@@ -489,20 +483,28 @@ MERCH
 	border-radius: 10px 10px 0 0;
 }
 
+
+
 .items{
 	background-color: #E5DFA0;
-	width: 85%;
-	margin: 13px auto 10px;
+	width: 25%;
+
+	margin: 13px 3.5% 10px;
 	padding: 5px;
 	border-radius: 10px;
 	box-shadow: 2px 2px 5px #938E58;
+	float: left;
+	overflow: auto;
+
 }
+
+
 
 .items h4{
 	border-bottom: 1px solid #3f3f3f;
 	max-width: 50%;
 	padding: 0;
-	margin: 0 auto;
+	margin: 0 auto 5px;
 	color: #3f3f3f;
 }
 
@@ -520,9 +522,74 @@ MERCH
 	border: 1px solid #969696;
 }
 
+@media screen and (max-width: 1125px){
+	.items{
+		width: 40%;
+		margin: inherit 10% inherit;
+	}
+	#reviews, #about-content{
+		float: none;
+		margin: inherit auto;
+	}
+
+}
+
+@media screen and (max-width: 660px){
+	#page-name{
+		display: none;
+	}	
+	#social-links{
+		position: absolute;
+		top: 175px;
+		box-shadow: none;
+	}
+	#headline h1{
+		max-width: 100%;
+	}
+
+	section, span, #headline h1, #headline, #views, .view, #reviews, #about-content, footer, #social-links{
+		box-shadow: 1px 1px 2px #000;
+
+	}
+	
+	#headline{
+		max-width: 90%;
+		width: 90%;
+	}
+
+	#views, #about-content, #reviews, #menu, #shop{
+		width: 100%;
+		max-width: 100%;
+		margin: inherit 0;
+		border-radius: 0;
+	}
+
+	#views h3, #about-content h3, #reviews h3, #menu h3, #shop h3{
+		border-radius: 0;
+	}
+
+	#reviews, #about-content{
+		float: none;
+		margin: inherit 0;
+	}
+	.view{
+		max-width: 90%;
+		box-shadow: 3px 2px 5px #000;
+	}
+
+	#hour-table{
+		max-width: 90%;
+		width: 90%;
+	}
 
 
 
+	.items{
+		float: none;
+		width: 80%;
+		margin: 10px auto 5px;
+	}
+}
 
 
 
